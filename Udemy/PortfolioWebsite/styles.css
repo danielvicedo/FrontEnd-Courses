@@ -1,0 +1,222 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--primary-color: #f9f7f7;
+	--secondary-color: #dbe2ef;
+	--accent-color: #3f72af;
+	--text-color: #112d4e;
+}
+html {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 14pt;
+	color: var(--text-color);
+	scroll-behavior: smooth;
+}
+body {
+	background-color: var(--primary-color);
+	min-height: 100vh;
+}
+header {
+	padding: 100px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex-wrap: wrap-reverse;
+}
+header img {
+	height: 40vh;
+}
+#header-content {
+	width: 850px;
+	max-width: 100%;
+}
+#header-content h1 {
+	font-size: 4rem;
+}
+#header-content h2 {
+	margin: 20px 0;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+#header-content a {
+	background-color: var(--accent-color);
+	color: white;
+	font-size: medium;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 20px;
+	padding: 0.5em 1.25em;
+	box-sizing: content-box;
+	border-radius: 30px;
+	transition: 300ms ease;
+}
+#header-content a:hover {
+	background-color: var(--secondary-color);
+	color: black;
+}
+#skillset-section {
+	padding: 80px 20px 150px 20px;
+	background-color: var(--secondary-color);
+	margin-top: 50px;
+}
+#skillset-section h2 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+#skills-div {
+	margin: 60px;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+#skills-div h3 {
+	background-color: var(--primary-color);
+	padding: 15px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.skill-list {
+	width: 400px;
+	max-width: 100%;
+	border: 10px solid var(--primary-color);
+	border-top: none;
+}
+.skill-list ul {
+	list-style: none;
+	margin: 10px 0;
+}
+.skill-list ul li {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.skill-list ul li progress {
+	accent-color: var(--accent-color);
+	display: flex;
+	justify-content: flex-end;
+	width: 50%;
+}
+#projects-section {
+	padding: 100px 20px;
+}
+#projects-section h2 {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 60px;
+}
+details {
+	margin: 20px auto;
+	width: 1000px;
+	max-width: 100%;
+	background-color: var(--secondary-color);
+	border-radius: 6px;
+}
+details summary {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	gap: 30px;
+	padding: 30px;
+	transition: 500ms ease;
+}
+details summary:hover {
+	opacity: 0.7;
+}
+details .number {
+	background-color: var(--accent-color);
+	color: white;
+	min-height: 50px;
+	min-width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+details h3 {
+	font-size: 1.75rem;
+}
+details .text-container {
+	padding: 30px;
+	padding-top: 0;
+}
+details .project-link {
+	display: inline-block;
+	margin-top: 30px;
+	background-color: var(--accent-color);
+	color: white;
+	padding: 0.75em 1.5em;
+	border-radius: 50px;
+	font-weight: 500;
+	transition: 300ms ease;
+	cursor: pointer;
+}
+details .project-link:hover {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+}
+footer {
+	background-color: var(--secondary-color);
+	padding: 100px 20px;
+}
+footer .grid-container {
+	margin: 0 auto;
+	width: 1000px;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr max-content;
+	gap: 100px;
+}
+footer #at-symbol {
+	font-size: 250pt;
+}
+footer h3 {
+	margin-top: 80px;
+	font-size: 2rem;
+}
+footer a {
+	margin-top: 5px;
+	display: inline-block;
+	color: var(--text-color);
+	text-decoration: none;
+}
+footer a:hover {
+	color: var(--accent-color);
+}
+@media (max-width: 1000px) {
+	header {
+		padding: 100px 20px 0 0;
+		text-align: center;
+	}
+	header h1 {
+		margin-top: 0;
+		font-size: 10vw;
+	}
+	header h2 {
+		font-size: 1.3rem;
+	}
+	#header-content p {
+		padding: 0 30px;
+	}
+	header img {
+		display: none;
+	}
+	footer .grid-container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 0;
+	}
+	footer #at-symbol {
+		font-size: 150pt;
+	}
+	footer h3 {
+		margin-top: 50px;
+	}
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loading Animation</title>
+        <style>
+            html {
+                background-color: black;
+                margin: 0;
+                padding: 0;
+            }
+
+            #red-box {
+                width: 25px;
+                height: 25px;
+                border: 6px solid red;
+                border-radius: 4px;
+                box-shadow: 0 0 10px red, 0 0 10px red inset;
+                animation: 3s loading ease-in-out infinite;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                translate: -50% -50%;
+            }
+
+            #loading-icon {
+                width: 25px;
+                height: 25px;
+                border: 6px solid white;
+                border-top: 6px solid rgb(65, 151, 242);
+                border-radius: 50%;
+                animation: 1.5s spin linear infinite;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+            }
+
+            @keyframes loading {
+                0% {}
+
+                33% {
+                    transform: rotateX(180deg);
+                }
+
+                66% {
+                    transform: rotateY(180deg);
+                }
+
+                100% {
+                    transform: rotateZ(180deg);
+                }
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="red-box">
+
+        </div>
+        <div id="loading-icon">
+
+        </div>
+    </body>
+
+</html>

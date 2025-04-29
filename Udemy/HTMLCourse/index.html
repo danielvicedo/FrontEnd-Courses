@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Forms</title>
+    </head>
+
+    <body>
+        <h1>My First Form</h1>
+        <form>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+            <br />
+            <br />
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+            <br />
+            <br />
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <br />
+            <br />
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+            <br />
+            <br />
+            <label for="date-of-birth">Date of Birth</label>
+            <input type="date" id="date-of-birth">
+            <br />
+            <br />
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option selected disabled>choose</option>
+                <option value="option1">Male</option>
+                <option value="option2">Female</option>
+            </select>
+            <br />
+            <br />
+            <input type="checkbox" required id="terms-and-conditions">
+            <label for="terms-and-conditions">Please accept the terms and conditions before submitting the form.</label>
+            <br />
+            <br />
+            <input type="checkbox" checked id="newsletter">
+            <label for="newsletter">Would you like to recieve our monthly newsletter?</label>
+            <br />
+            <br />
+            <input type="submit" id="submit">
+            <input type="reset" id="reset">
+
+        </form>
+        <br>
+        <hr>
+        <hr>
+        <table cellspacing="20">
+            <h1>Tables</h1>
+            <thead>
+                <tr>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>gender</th>
+                    <th>year of birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Albert </td>
+                    <td>Einstein</td>
+                    <td>male</td>
+                    <td>1879</td>
+                </tr>
+                <tr>
+                    <td>Stephen </td>
+                    <td>Hawking</td>
+                    <td>male</td>
+                    <td>1942</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <hr>
+        <hr><br>
+        <video title="Pizza Video" autoplay muted loop height="500"
+            src="../HTMLCourse/images/13111090_2160_3840_25fps.mp4">Video</video>
+        <hr>
+        <hr><br>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/QwarZBtFoFA"
+            title="Code A React Website Tutorial | ReactJS Tutorial For Beginners" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </body>
+
+</html>

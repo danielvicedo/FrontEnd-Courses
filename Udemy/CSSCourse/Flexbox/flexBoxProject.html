@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Project
+        </title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: rgb(2, 2, 13);
+                border: 5px solid red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                width: 100vw;
+                height: 100vh;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            div {
+                width: 270px;
+                height: 150px;
+                border: 3px solid grey;
+                font-size: 10pt;
+                border-radius: 20px;
+                padding: 10px;
+                color: white;
+                overflow: hidden;
+
+            }
+
+            @media (max-width: 200px) {
+                body {
+                    width: 200px;
+                    flex-shrink: 1;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illum libero ullam corrupti iste
+                laudantium sunt harum eum quas incidunt.</p>
+        </div>
+        <div>
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illum libero ullam corrupti iste
+                laudantium sunt harum eum quas incidunt.</p>
+        </div>
+        <div>
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illum libero ullam corrupti iste
+                laudantium sunt harum eum quas incidunt.</p>
+        </div>
+        <div>
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illum libero ullam corrupti iste
+                laudantium sunt harum eum quas incidunt.</p>
+        </div>
+    </body>
+
+</html>

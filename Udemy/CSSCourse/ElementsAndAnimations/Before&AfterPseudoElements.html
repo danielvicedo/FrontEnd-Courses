@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Before and After</title>
+        <style>
+            h1 {
+                position: relative;
+                width: max-content;
+            }
+
+            h1::after {
+                content: '';
+                height: 4px;
+                width: 100%;
+                background: linear-gradient(red 20%, blue 60%, red 80%);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>My Element</h1>
+    </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                
+                display: grid;
+                /*use inspect element and click grid to display the grid layout*/
+                border: 1px solid red;
+                /*important next row!*/
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40pt;
+                background-color: rgb(0, 110, 255);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="box-1" class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">3</div>
+        <div class="box">3</div>
+        <div class="box">3</div>
+        <div id="box-4" class="box">4</div>
+    </body>
+
+</html>

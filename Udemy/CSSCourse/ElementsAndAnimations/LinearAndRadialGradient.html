@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Background Images</title>
+        <style>
+            div{
+                margin: 20px;
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+            }
+            .linear{
+                background-image: linear-gradient(black 30%, red 50%, yellow 75%);
+            }
+            .radial {
+                background-size: cover;
+                background-image: radial-gradient(black 30%, white 31%, transparent 45%), url("images/universe.jpg")
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="linear"></div>
+        <div class="radial"></div>
+    </body>
+
+</html>
