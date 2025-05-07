@@ -4,8 +4,13 @@ const newGameBtn = document.querySelector('.new-game')
 const rollDiceBtn = document.querySelector('.roll-dice')
 const holdBtn = document.querySelector('.hold-score')
 const diceImg = document.querySelector('.dice-img')
-
 const players = Array.from(document.querySelectorAll('.player'))
+
+//Instructions
+const btnCloseInstructions = document.querySelector('.close-instructions')
+const btnInstructions = document.querySelector('.instructions-btn')
+const overlay = document.querySelector('.instructions-overlay')
+const instructions = document.querySelector('.instructions')
 
 const activePlayer = function (arr) {
 	for (let i = 0; i < arr.length; i++) {
@@ -24,9 +29,7 @@ const changePlayer = function (arr) {
 		}
 	}
 }
-let currentScore = activePlayer(players).querySelector(
-	'.current-rolls > .current-score'.textContent
-)
+let currentScore = 0
 rollDiceBtn.addEventListener('click', function () {
 	const currentScoreDOM = activePlayer(players).querySelector(
 		'.current-rolls > .current-score'
@@ -68,6 +71,30 @@ newGameBtn.addEventListener('click', function () {
 	players[0].classList.remove('inactive')
 	players[1].classList.add('inactive')
 	diceImg.setAttribute('hidden', true)
+	currentScore = 0
+
 	players.forEach((e) => (e.querySelector('.current-score').textContent = '0'))
+	players.forEach((e) => e.classList.remove('winner'))
 	players.forEach((e) => (e.querySelector('.score').textContent = '0'))
+	holdBtn.removeAttribute('disabled')
+	rollDiceBtn.removeAttribute('disabled')
+})
+
+/* INSTRUCTIONS */
+const openInstructions = function () {
+	instructions.removeAttribute('hidden')
+	overlay.removeAttribute('hidden')
+}
+const closeInstructions = function () {
+	instructions.setAttribute('hidden', true)
+	overlay.setAttribute('hidden', true)
+}
+btnInstructions.addEventListener('click', openInstructions)
+
+btnCloseInstructions.addEventListener('click', closeInstructions)
+overlay.addEventListener('click', closeInstructions)
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Escape' && !instructions.attributes.getNamedItem('hidden')) {
+		closeInstructions()
+	}
 })
