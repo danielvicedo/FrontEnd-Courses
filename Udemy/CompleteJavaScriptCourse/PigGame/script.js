@@ -12,6 +12,8 @@ const btnInstructions = document.querySelector('.instructions-btn')
 const overlay = document.querySelector('.instructions-overlay')
 const instructions = document.querySelector('.instructions')
 
+let currentScore = 0
+
 const activePlayer = function (arr) {
 	for (let i = 0; i < arr.length; i++) {
 		if (!arr[i].classList.contains('inactive')) {
@@ -19,7 +21,6 @@ const activePlayer = function (arr) {
 		}
 	}
 }
-
 const changePlayer = function (arr) {
 	for (let i = 0; i < players.length; i++) {
 		if (!players[i].classList.contains('inactive')) {
@@ -29,7 +30,6 @@ const changePlayer = function (arr) {
 		}
 	}
 }
-let currentScore = 0
 rollDiceBtn.addEventListener('click', function () {
 	const currentScoreDOM = activePlayer(players).querySelector(
 		'.current-rolls > .current-score'
@@ -58,6 +58,7 @@ holdBtn.addEventListener('click', function () {
 
 	if (Number(totalScore.textContent) >= 100) {
 		activePlayer(players).classList.add('winner')
+		diceImg.setAttribute('hidden', true)
 		holdBtn.setAttribute('disabled', true)
 		rollDiceBtn.setAttribute('disabled', true)
 	} else {
@@ -89,6 +90,7 @@ const closeInstructions = function () {
 	instructions.setAttribute('hidden', true)
 	overlay.setAttribute('hidden', true)
 }
+
 btnInstructions.addEventListener('click', openInstructions)
 
 btnCloseInstructions.addEventListener('click', closeInstructions)

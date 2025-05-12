@@ -106,17 +106,17 @@ button:active {
 	transform: translate(-50%, 3px);
 	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
 }
+.instructions-btn {
+	top: 6rem;
+}
 .new-game {
-	top: 210px;
+	top: 12.5rem;
 }
 .roll-dice {
-	top: 615px;
+	top: 37.8rem;
 }
 .hold-score {
-	top: 670px;
-}
-.instructions-btn {
-	top: 100px;
+	top: 41.5rem;
 }
 img {
 	top: 370px;
