@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--free-color: #239d60;
+	--secondary-color: #a3de83;
+}
+body {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: linear-gradient(#010301e7 0%, #142d06e7 10% 90%, #010301e7 100%);
+	background-attachment: fixed;
+}
+#container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	border-radius: 15px;
+	height: 100vh;
+	width: 60rem;
+	gap: 30px;
+	box-sizing: border-box;
+}
+.card {
+	box-sizing: border-box;
+	height: 25rem;
+	width: 17rem;
+	padding: 0 1rem;
+	text-align: center;
+	border: 5px solid #212125;
+	border-radius: 15px;
+	background: linear-gradient(#a3de83 10%, #cef0bc 100%);
+}
+.title {
+	font-size: 2rem;
+	padding-top: 2.5rem;
+	padding-bottom: 1rem;
+}
+.price {
+	font-size: 3rem;
+}
+.price::before {
+	content: '$';
+	font-size: 1.8rem;
+}
+.subtitle {
+	font-size: 0.8rem;
+	padding-bottom: 2rem;
+}
+.description {
+	padding-bottom: 2rem;
+	font-size: 1.1rem;
+}
+.btn {
+	width: 7rem;
+	height: 3rem;
+	font-weight: 500;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	background-color: hsl(240, 6%, 14%);
+	color: #ffffff;
+}
+.btn:hover {
+	transform: translate(0, -2px);
+	background-color: hsl(240, 6%, 34%);
+}
